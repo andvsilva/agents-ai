@@ -1,0 +1,1 @@
+### Lab 1: AI Fundamentals - Your First AI Journey
