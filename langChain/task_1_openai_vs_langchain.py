@@ -10,7 +10,7 @@ import os
 from dotenv import load_dotenv
 from openai import OpenAI
 from langchain_openai import ChatOpenAI
-
+from rich import print
 # -------------------------------------------------------------------
 # 🔴 RAW OPENAI SDK APPROACH (Modern Responses API)
 # -------------------------------------------------------------------

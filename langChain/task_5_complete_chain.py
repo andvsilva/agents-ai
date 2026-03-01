@@ -28,7 +28,7 @@ from langchain_core.output_parsers import (
 load_dotenv(override=True)
 
 MODEL_NAME = "gpt-4.1-mini"
-TEMPERATURE = 0.3
+TEMPERATURE = 0.3 # creativity level (0.3 = mildly creative)
 MARKERS_DIR = "markers"
 
 
@@ -62,7 +62,7 @@ def build_list_chain(llm: ChatOpenAI):
         template="List 3 use cases for {technology} (comma-separated):",
         input_variables=["technology"],
     )
-    return prompt | llm | CommaSeparatedListOutputParser()
+    return prompt | llm | CommaSeparatedListOutputParser() # pipe operator
 
 
 # =========================

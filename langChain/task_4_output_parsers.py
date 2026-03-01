@@ -12,7 +12,6 @@ Learning Goal: Extract structured data from unstructured AI responses.
 
 import os
 import json
-
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import PromptTemplate
@@ -48,7 +47,7 @@ def main():
 
     llm = ChatOpenAI(
         model="gpt-4.1-mini",
-        api_key=get_api_key,
+        api_key=get_api_key(),
         temperature=0
     )
 
@@ -66,7 +65,7 @@ def main():
         input_variables=["technology"]
     )
 
-    list_chain = list_prompt | llm | list_parser   # pipeline
+    list_chain = list_prompt | llm | list_parser   # LangChain’s pipe operator.
 
     if list_chain:
         result = list_chain.invoke({
@@ -102,7 +101,7 @@ def main():
         }
     )
 
-    json_chain = json_prompt | llm | json_parser # pipeline
+    json_chain = json_prompt | llm | json_parser # LangChain’s pipe operator.
 
     if json_chain:
         result = json_chain.invoke({

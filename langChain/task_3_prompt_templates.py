@@ -44,7 +44,7 @@ def main():
     print("=" * 50)
 
     template = PromptTemplate(
-        input_variables=["topic", "stype"],
+        input_variables=["topic", "style"],
         template="Explain {topic} in {style}"
     )
 
@@ -57,7 +57,7 @@ def main():
 
     llm = ChatOpenAI(
         model="gpt-4.1-mini",
-        api_key=get_api_key,
+        api_key=get_api_key(),
         temperature=0.7
     )
 
