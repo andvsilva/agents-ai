@@ -3,3 +3,5 @@
 ### Lab 2: LangChain Fundamentals - Code Files
 
 ### Lab 3: Prompt Engineering Lab with LangChain
+
+### Lab 4: 🔍 Vector Databases & Semantic Search Lab
