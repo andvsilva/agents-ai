@@ -7,3 +7,5 @@
 ### Lab 4: 🔍 Vector Databases & Semantic Search Lab
 
 ### Lab 5: 🚀 RAG Lab: From Search to Answers
+
+### Lab 6: LangGraph Basics: Build Stateful AI Workflows Progressively
